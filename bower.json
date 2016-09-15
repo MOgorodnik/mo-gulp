@@ -1,0 +1,42 @@
+{
+  "name": "starter-bower.json",
+  "version":"1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "MOgorodnik <mr.ogorodnik@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "http://www.nettraveler.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.1.0",
+    "bootstrap": "#3.3.7",
+    "font-awesome": "",
+    "bootstrap-validator": "",
+    "slick-carousel": "",
+    "jquery.maskedinput": "",
+    "magnific-popup": "",
+    "selectize": ""
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    }
+  }
+}
