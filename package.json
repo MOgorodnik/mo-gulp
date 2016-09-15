@@ -1,12 +1,12 @@
 {
-  "name": "tourist2",
-  "version": "1.0.1",
+  "name": "mo-gulp",
+  "version": "1.0.0",
   "description": "home",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mogorodnik",
+  "author": "MOgorodnik",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.15.0",
