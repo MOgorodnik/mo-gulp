@@ -1,6 +1,5 @@
 "use strict";
 var bs = require('browser-sync'); // Подключаем Browser Sync
-//var reload = bs.reload;
 var del = require('del'); // Подключаем библиотеку для удаления файлов и папок
 var gulp = require('gulp'); // Подключаем Gulp
 var autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
