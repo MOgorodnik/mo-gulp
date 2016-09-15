@@ -5,8 +5,8 @@ var gulp = require('gulp'); // Подключаем Gulp
 var autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
 var cache = require('gulp-cache'); // Подключаем библиотеку кеширования
 var cssnano = require('gulp-cssnano'); // Подключаем пакет для минификации CSS
-var cleanCSS = require('gulp-clean-css');// Подключаем пакет для минификации CSS
 
+var cleanCSS = require('gulp-clean-css');// Подключаем пакет для минификации CSS
 var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');// Подключаем библиотеку для работы с изображениями
 var newer = require('gulp-newer');// Подключаем для проверки был ли изменен файл/папка перед выполнением таска/плагина
@@ -17,7 +17,7 @@ var useref = require('gulp-useref');
 var pngquant     = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
 var runSequence = require('run-sequence');
 var wiredep = require('wiredep').stream;
-var debug = require('gulp-debug'); //
+var debug = require('gulp-debug'); //Плагин для дебага
 
 	//var concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
 	//var rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
