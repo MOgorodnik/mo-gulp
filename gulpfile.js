@@ -5,6 +5,8 @@ var gulp = require('gulp'); // Подключаем Gulp
 var autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
 var cache = require('gulp-cache'); // Подключаем библиотеку кеширования
 var cssnano = require('gulp-cssnano'); // Подключаем пакет для минификации CSS
+var cleanCSS = require('gulp-clean-css');// Подключаем пакет для минификации CSS
+
 var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');// Подключаем библиотеку для работы с изображениями
 var newer = require('gulp-newer');// Подключаем для проверки был ли изменен файл/папка перед выполнением таска/плагина
@@ -264,8 +266,19 @@ gulp.task('watch', ['bs', 'sass', 'bower'], function (){
 	//gulp.watch(path.built.html, bs.reload);
 });
 
-
-
+// Example
+//*************************************************************************
+gulp.task('minify-css', function() {
+	return gulp.src('./src/*.css')
+		.pipe(sourcemaps.init())
+		.pipe(cleanCSS({debug: true}, function(details) {
+			console.log(details.name + ': ' + details.stats.originalSize);
+			console.log(details.name + ': ' + details.stats.minifiedSize);
+		}))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('dist'));
+});
+});
 
 
 
