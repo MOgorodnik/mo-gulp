@@ -278,7 +278,6 @@ gulp.task('minify-css', function() {
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist'));
 });
-});
 
 
 
