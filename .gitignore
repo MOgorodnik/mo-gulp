@@ -1,0 +1,13 @@
+# IDE Project files
+.idea
+#gulpfile.js
+#package.json
+#.bowerrc
+node_modules
+#psd
+#source
+.zip
+.rar
+built
+img/*.*
+font/*.*
