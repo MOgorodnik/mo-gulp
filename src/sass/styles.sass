@@ -19,6 +19,7 @@ html, body
 @import "btn"
 @import "form"
 @import "head"
+@import "label"
 
 .arrow-down
   display: inline-block
@@ -39,12 +40,12 @@ html, body
   margin: 3px 3px 0 0
 
 #topCarousel
-  height: 100vh
+  height: 90vh
 .carousel-fade
   .carousel-inner
-    height: 100vh
+    height: 90vh
     .item
-      height: 100vh
+      height: 90vh
       opacity: 0
       transition: opacity 0.7s
       background-size: cover
@@ -68,6 +69,123 @@ html, body
     &.next.left, &.prev.right, &.active
       opacity: 1
       transform: translate3d(0, 0, 0)
+
+.posters
+  overflow: hidden
+  margin: 0 4px
+  text-align: center
+  &__holder
+    display: inline-block
+    text-align: left
+  &__item
+    float: left
+    width: 180px
+    margin: 26px
+  & .label
+    border-radius: 0
+    padding: 0 5px
+    text-transform: uppercase
+    margin-right: 5px
+    margin-bottom: 3px
+    float: left
+@media screen and (min-width: 998px) and (max-width: 1199px)
+  .posters__holder
+    font-size: inherit
+@media screen and (min-width: 768px) and (max-width: 997px)
+  .posters__holder
+    max-width: 700px
+//iPhone 6
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+  .posters
+    margin: 10px 0
+    &__holder
+      max-width: 374px
+    &__item
+      float: left
+      margin: 0 3px
+
+//iPhone 6+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+  .posters
+    margin: 10px 0
+    &__holder
+      max-width: 374px
+    &__item
+      float: left
+      margin: 0 3px
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait)
+  .posters__item
+    float: none
+    margin: 20px auto
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+  .posters
+    margin: 0
+    &__holder
+      max-width: 564px
+    &__item
+      margin: 15px 4px
+
+
+.poster
+  position: relative
+  padding-top: 14px
+  &__head
+    position: absolute
+    z-index: 2
+    top: 0
+  &__body
+    position: relative
+    display: block
+    &:hover .poster__info
+      opacity: 1
+      color: #000
+  &__foot
+    padding: 3px 0
+  &__info
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(254, 222, 30, 0.9)
+    font-size: 18px
+    line-height: 24px
+    padding: 32px 10px 32px 17px
+    z-index: 5
+    transition: 0.2s ease-in 0.1s
+  &__title
+    line-height: 22px
+    height: 68px
+    margin-bottom: 18px
+    overflow: hidden
+  &__details
+    font-size: 16px
+    line-height: 18px
+    margin-bottom: 20px
+    p
+      margin-bottom: 0
+  &__price
+    margin-bottom: 0
+
+.place
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.city
+
+.date
+  font-style: normal
+
+.price
+  font-size: 12px
+  line-height: 20px
+  padding: 0 20px
+  background: url("../img/sp-icons.png") 0 -1976px
+  &:hover
+    background-position: 0 -387px
+
 
 
 
