@@ -9,6 +9,7 @@ html, body
 
 .page-body
   flex: 1 0 auto
+  background: #f3f3f3
 
 .page-foot
   flex: 0 0 auto
@@ -70,9 +71,10 @@ html, body
       opacity: 1
       transform: translate3d(0, 0, 0)
 
+// posters
 .posters
   overflow: hidden
-  margin: 0 4px
+  margin: 0 4px 34px
   text-align: center
   &__holder
     display: inline-block
@@ -88,21 +90,28 @@ html, body
     margin-right: 5px
     margin-bottom: 3px
     float: left
-@media screen and (min-width: 998px) and (max-width: 1199px)
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px)
   .posters__holder
-    font-size: inherit
-@media screen and (min-width: 768px) and (max-width: 997px)
+    max-width: 928px
+@media screen and (min-width: 768px) and (max-width: 991px)
   .posters__holder
-    max-width: 700px
-//iPhone 6
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    max-width: 696px
+@media screen and (min-width: 480px) and (max-width: 767px)
+  .posters__holder
+    max-width: 464px
+@media screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait)
+  .posters__item
+    float: none
+    margin: 20px auto
+@media screen and (min-width: 320px) and (max-width: 479px) and (orientation: landscape)
   .posters
-    margin: 10px 0
+    margin: 0
     &__holder
-      max-width: 374px
+      max-width: 564px
     &__item
-      float: left
-      margin: 0 3px
+      margin: 15px 4px
 
 //iPhone 6+
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
@@ -113,17 +122,37 @@ html, body
     &__item
       float: left
       margin: 0 3px
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait)
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+  .posters__holder
+    max-width: 660px
   .posters__item
-    float: none
-    margin: 20px auto
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+    margin: 19px
+//iPhone 6
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
   .posters
-    margin: 0
+    margin: 10px 0
     &__holder
-      max-width: 564px
+      max-width: 374px
     &__item
-      margin: 15px 4px
+      float: left
+      margin: 0 3px
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+  .posters__holder
+    max-width: 660px
+  .posters__item
+    margin: 19px
+//iPhone 5
+@media only screen  and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+  .posters
+    margin: 10px 0
+    &__holder
+      max-width: 374px
+    &__item
+      float: left
+      width: 150px
+      margin: 0 5px
+
+
 
 
 .poster
@@ -136,9 +165,14 @@ html, body
   &__body
     position: relative
     display: block
+    //height: 255px
+    //width: 180px
     &:hover .poster__info
       opacity: 1
       color: #000
+  &__img
+    width: 100%
+    height: 100%
   &__foot
     padding: 3px 0
   &__info
@@ -174,6 +208,7 @@ html, body
   white-space: nowrap
 
 .city
+  font-size: 18px
 
 .date
   font-style: normal

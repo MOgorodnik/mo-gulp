@@ -253,13 +253,13 @@ gulp.task('bower', function () {
 		.pipe(bs.reload({stream:true}))
 		.pipe(debug({title: 'end:'}));
 });
-// Отлавливаем ошибки, віводит сообщение о проблеме без лишнего кода
+// Отлавливаем ошибки, выводит сообщение о проблеме без лишнего кода
 // .on('error', function (e) {
 // 	console.log(e);
 // })
 
 
-gulp.task('watch', ['bs', 'sass', 'bower'], function (){
+gulp.task('watch', ['bs', 'sass', 'bower', 'images'], function (){
 	//gulp.watch('src/sass/styles.sass', ['sass']);
 	gulp.watch(path.src.style, ['sass']);
 	gulp.watch(path.src.html, ['bower']);
